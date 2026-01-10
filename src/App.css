@@ -1,0 +1,109 @@
+.app {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.product-title {
+  font-size: 14px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+.add-cart-btn {
+  padding: 5px 10px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-image {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.cart-icon-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cart-total {
+  text-align: right;
+  font-weight: bold;
+}
