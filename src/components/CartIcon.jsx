@@ -2,7 +2,8 @@ function CartIcon({ cart, isOpen, onToggle }) {
   return (
     <div className="cart-icon-container">
       <div className="cart-icon" onClick={onToggle}>
-        🛒
+        {/* win + .*/}
+        🛒  
         {cart.length > 0 && (
           <span className="cart-badge">
             {cart.reduce((acc, item) => acc + item.quantity, 0)}
@@ -19,12 +20,12 @@ function CartIcon({ cart, isOpen, onToggle }) {
               {cart.map((item) => (
                 <div key={item.id} className="cart-item">
                   <span>{item.title} x {item.quantity}</span>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span> {(item.price * item.quantity).toFixed(2)} جنيه</span>
                 </div>
               ))}
               <hr />
               <p className="cart-total">
-                Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+                Total:جنيه {cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
               </p>
             </>
           )}

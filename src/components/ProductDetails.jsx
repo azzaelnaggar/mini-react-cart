@@ -5,7 +5,14 @@ function ProductDetails({ product, onClose }) {
         <img src={product.image} alt={product.title} className="modal-image" />
         <h2>{product.title}</h2>
         <p>{product.description}</p>
-        <p><strong>Price:</strong> ${product.price}</p>
+        <p>
+          <strong>Price:</strong> {product.price} جنيه
+        </p>
+        <p>
+          <strong>Rating:</strong> {product.rating.rate} ⭐ (
+          {product.rating.count} reviews)
+        </p>
+
         <button onClick={onClose}>Close</button>
       </div>
     </div>
